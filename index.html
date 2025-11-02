@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AS+ Customs | Personalização Automóvel de Alto Nível</title>
+    <meta
+      name="description"
+      content="AS+ Customs — Personalização automóvel premium em Leiria. Escurecimento profissional de vidros, car wrapping, PPF e chrome delete com acabamentos únicos."
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+
+      @layer utilities {
+        .glass {
+          background: linear-gradient(135deg, rgba(26, 28, 34, 0.8), rgba(12, 12, 16, 0.6));
+          backdrop-filter: blur(22px);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .grid-glow {
+          background-image: radial-gradient(
+              circle at 25% 15%,
+              rgba(107, 255, 191, 0.18),
+              transparent 48%
+            ),
+            radial-gradient(
+              circle at 80% 35%,
+              rgba(34, 197, 94, 0.25),
+              transparent 52%
+            ),
+            linear-gradient(120deg, rgba(12, 12, 16, 0.9), rgba(12, 12, 16, 0.6));
+        }
+        .gradient-clip {
+          background: linear-gradient(120deg, #6bffbf 0%, #24d08f 50%, #0ea372 100%);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        .border-animated {
+          position: relative;
+        }
+        .border-animated::before {
+          content: "";
+          position: absolute;
+          inset: -1px;
+          border-radius: inherit;
+          background: conic-gradient(
+            rgba(107, 255, 191, 0.35),
+            rgba(15, 118, 110, 0.65),
+            rgba(14, 197, 126, 0.85),
+            rgba(107, 255, 191, 0.35)
+          );
+          filter: blur(12px);
+          opacity: 0.7;
+          transition: opacity 0.5s ease;
+          z-index: -1;
+        }
+        .border-animated:hover::before {
+          opacity: 1;
+        }
+        .floating-badge {
+          animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .mask-gradient {
+          mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+          mask-mode: alpha;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#060608] text-zinc-100 antialiased overflow-x-hidden">
+    <div class="absolute inset-0 -z-10 grid-glow"></div>
+    <header class="relative">
+      <div
+        class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pb-24 pt-12 sm:pb-32 lg:px-10"
+      >
+        <nav class="flex items-center justify-between">
+          <a href="#" class="inline-flex items-center gap-2">
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 via-teal-400 to-emerald-600 text-black font-semibold tracking-tight"
+            >
+              AS+
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-semibold text-emerald-400">AS+ Customs</span>
+              <span class="text-xs text-zinc-400">Personalização Automóvel</span>
+            </div>
+          </a>
+          <div class="hidden items-center gap-5 text-sm font-medium sm:flex">
+            <a href="#servicos" class="text-zinc-300 transition hover:text-white"
+              >Serviços</a
+            >
+            <a href="#portfolio" class="text-zinc-300 transition hover:text-white"
+              >Portfolio</a
+            >
+            <a href="#processo" class="text-zinc-300 transition hover:text-white"
+              >Processo</a
+            >
+            <a href="#contacto" class="text-zinc-300 transition hover:text-white"
+              >Contacto</a
+            >
+          </div>
+          <a
+            href="#contacto"
+            class="border-animated hidden rounded-full border border-emerald-500/60 bg-white/5 px-5 py-2 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/10 sm:inline-block"
+          >
+            Reservar Projeto
+          </a>
+        </nav>
+        <div class="relative isolate flex flex-col gap-14 lg:flex-row lg:items-center">
+          <div class="relative flex-1">
+            <span class="floating-badge glass absolute -top-16 right-12 hidden rounded-full px-5 py-3 text-xs uppercase tracking-[0.35em] text-emerald-200 shadow-lg sm:block">
+              premium custom
+            </span>
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col gap-3">
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Leiria • Portugal</span
+                >
+                <h1 class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                  Personalizamos o seu automóvel com precisão cirúrgica e estética
+                  futurista.
+                </h1>
+              </div>
+              <p class="max-w-xl text-base text-zinc-300 sm:text-lg">
+                AS+ Customs eleva a personalidade do seu veículo através de soluções
+                de wrapping, proteção PPF, escurecimento de vidros e chrome delete
+                executados com tecnologia de ponta e acabamentos exclusivos.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="#contacto"
+                  class="border-animated rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-300"
+                >
+                  Iniciar Conversa
+                </a>
+                <a
+                  href="#portfolio"
+                  class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-emerald-400 hover:text-emerald-300"
+                >
+                  Ver Transformações
+                </a>
+              </div>
+              <div class="mt-6 flex flex-wrap items-center gap-6 text-sm text-zinc-400">
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Garantia
+                  de acabamento OEM+
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Materiais
+                  certificados pela indústria
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative flex-1">
+            <div
+              class="glass relative overflow-hidden rounded-[32px] border border-white/10 p-6 shadow-2xl shadow-emerald-500/20"
+            >
+              <div
+                class="mask-gradient absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513030169111-5a764ff1d58f?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-70"
+              ></div>
+              <div class="relative z-10 flex min-h-[420px] flex-col justify-between">
+                <div class="flex items-start justify-between">
+                  <div class="text-left">
+                    <span class="text-xs uppercase tracking-[0.4em] text-emerald-300"
+                      >Case Study</span
+                    >
+                    <h2 class="mt-2 text-2xl font-semibold text-white">
+                      Porsche 911 Turbo S
+                    </h2>
+                    <p class="mt-2 text-sm text-zinc-300">
+                      Full wrap em acabamento metalizado midnight, PPF frontal e
+                      chrome delete integral para um perfil agressivo e proteção total.
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-full bg-emerald-400 px-3 py-1 text-xs font-semibold text-black shadow shadow-emerald-500/30"
+                  >
+                    +62%
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-sm text-zinc-200">
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.25em] text-emerald-300">
+                      acabamento
+                    </p>
+                    <p class="mt-2 text-lg font-semibold">Midnight Metallic</p>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.25em] text-emerald-300">
+                      proteção
+                    </p>
+                    <p class="mt-2 text-lg font-semibold">Full PPF + UV</p>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.25em] text-emerald-300">
+                      duração
+                    </p>
+                    <p class="mt-2 text-lg font-semibold">4 dias</p>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.25em] text-emerald-300">
+                      resultado
+                    </p>
+                    <p class="mt-2 text-lg font-semibold">98% veículos protegidos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative">
+      <section id="servicos" class="px-6 py-20 sm:py-24">
+        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr,1fr]">
+          <div class="flex flex-col gap-6">
+            <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+              >Serviços Signature</span
+            >
+            <h2 class="text-3xl font-semibold sm:text-4xl">
+              Três experiências precisas que redefinem o visual e a integridade do seu
+              automóvel.
+            </h2>
+            <p class="text-base text-zinc-300">
+              Do escurecimento de vidros à proteção total da carroçaria, a AS+ Customs
+              combina inovação, precisão e materiais de elite para entregar resultados
+              que se destacam em qualquer pista ou avenida.
+            </p>
+          </div>
+          <div class="glass rounded-[30px] border border-white/10 p-8">
+            <div class="flex flex-col gap-6">
+              <div class="flex gap-3 text-sm text-zinc-300">
+                <span class="h-6 w-6 rounded-full bg-emerald-400/20 p-[6px] text-emerald-300"
+                  >❶</span
+                >
+                <div>
+                  <h3 class="text-lg font-semibold text-white">
+                    Escurecimento Profissional de Vidros
+                  </h3>
+                  <p class="mt-1">
+                    Películas solares certificadas com proteção UV de alto desempenho,
+                    privacidade total e aparência OEM+. Instalação de precisão sem
+                    bolhas ou falhas.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-3 text-sm text-zinc-300">
+                <span class="h-6 w-6 rounded-full bg-emerald-400/20 p-[6px] text-emerald-300"
+                  >❷</span
+                >
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Car Wrapping</h3>
+                  <p class="mt-1">
+                    Mudanças completas ou parciais com acabamentos mate, brilhante,
+                    metalizado, carbono ou escovado. Proteção da pintura original com
+                    uma nova identidade visual.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-3 text-sm text-zinc-300">
+                <span class="h-6 w-6 rounded-full bg-emerald-400/20 p-[6px] text-emerald-300"
+                  >❸</span
+                >
+                <div>
+                  <h3 class="text-lg font-semibold text-white">
+                    PPF — Paint Protection Film
+                  </h3>
+                  <p class="mt-1">
+                    Películas de proteção invisíveis com autorregeneração térmica para
+                    blindar frente, painéis e zonas sensíveis de riscos, abrasões e
+                    impacto de pedras.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-3 text-sm text-zinc-300">
+                <span class="h-6 w-6 rounded-full bg-emerald-400/20 p-[6px] text-emerald-300"
+                  >❹</span
+                >
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Chrome Delete & Custom</h3>
+                  <p class="mt-1">
+                    Revestimento de frisos cromados, detalhes de interiores e consola
+                    em tons personalizados. Um upgrade minimalista para um visual mais
+                    agressivo e uniforme.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="relative overflow-hidden px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                >Portfolio vivo</span
+              >
+              <h2 class="text-3xl font-semibold sm:text-4xl">
+                Projetos que fazem o asfalto parecer uma passerelle.
+              </h2>
+            </div>
+            <p class="max-w-md text-sm text-zinc-400">
+              Cada projeto é planeado com render 3D, teste de tonalidades e um roteiro
+              de instalação para garantir precisão absoluta e storytelling visual.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+              <img
+                src="https://images.unsplash.com/photo-1518826778770-a729fb53327b?auto=format&fit=crop&w=900&q=80"
+                alt="BMW M4 com wrap fosco"
+                class="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="glass absolute inset-x-4 -bottom-10 rounded-3xl border border-white/10 p-5 opacity-0 transition-all duration-500 group-hover:bottom-4 group-hover:opacity-100">
+                <h3 class="text-lg font-semibold text-white">BMW M4 Nightshade</h3>
+                <p class="mt-1 text-sm text-zinc-300">
+                  Wrap total mate stealth + chrome delete + proteção PPF frontal.
+                </p>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+              <img
+                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80"
+                alt="Range Rover com PPF"
+                class="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="glass absolute inset-x-4 -bottom-10 rounded-3xl border border-white/10 p-5 opacity-0 transition-all duration-500 group-hover:bottom-4 group-hover:opacity-100">
+                <h3 class="text-lg font-semibold text-white">Range Rover Urban Shield</h3>
+                <p class="mt-1 text-sm text-zinc-300">
+                  PPF integral com película auto regenerativa e tonalização de vidros.
+                </p>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+              <img
+                src="https://images.unsplash.com/photo-1502164980785-f8aa41d53611?auto=format&fit=crop&w=900&q=80"
+                alt="Audi RS em wrap metalizado"
+                class="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="glass absolute inset-x-4 -bottom-10 rounded-3xl border border-white/10 p-5 opacity-0 transition-all duration-500 group-hover:bottom-4 group-hover:opacity-100">
+                <h3 class="text-lg font-semibold text-white">Audi RS Project Pulse</h3>
+                <p class="mt-1 text-sm text-zinc-300">
+                  Wrap metalizado duplo tom + detalhes internos personalizados.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="processo" class="px-6 py-24">
+        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr,1.1fr]">
+          <div>
+            <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+              >Processo End-to-End</span
+            >
+            <h2 class="mt-4 text-3xl font-semibold sm:text-4xl">
+              Uma jornada guiada pelo detalhe: da ideia ao brilho final.
+            </h2>
+            <p class="mt-4 text-base text-zinc-300">
+              O método AS+ Customs garante previsão, transparência e consistência extrema. 
+              Cada fase é documentada para que acompanhe a transformação com confiança.
+            </p>
+            <div class="mt-8 grid gap-6 text-sm text-zinc-300">
+              <div class="glass rounded-3xl border border-white/10 p-5">
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Discovery</span
+                >
+                <p class="mt-2">
+                  Briefing presencial ou digital, análise de estilo, definição de materiais e timeline detalhada.
+                </p>
+              </div>
+              <div class="glass rounded-3xl border border-white/10 p-5">
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Design Lab</span
+                >
+                <p class="mt-2">
+                  Renderização 3D com pré-visualização do resultado e seleção fina de tonalidades e texturas.
+                </p>
+              </div>
+              <div class="glass rounded-3xl border border-white/10 p-5">
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Execução</span
+                >
+                <p class="mt-2">
+                  Instalação em ambiente controlado, com técnicos certificados e tecnologia de corte digital.
+                </p>
+              </div>
+              <div class="glass rounded-3xl border border-white/10 p-5">
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Entrega</span
+                >
+                <p class="mt-2">
+                  Entrega premium com sessão fotográfica, kit de manutenção e garantia escrita.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="glass relative rounded-[32px] border border-white/10 p-8">
+            <div class="absolute inset-x-8 top-0 h-40 -translate-y-1/2 rounded-[32px] bg-gradient-to-b from-emerald-400/40 to-transparent blur-3xl"></div>
+            <div class="relative flex flex-col gap-8">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.3em] text-emerald-300">
+                    Proprietário
+                  </p>
+                  <h3 class="mt-1 text-lg font-semibold text-white">
+                    Arsénio Santos
+                  </h3>
+                  <p class="text-sm text-zinc-400">Fundador & Master Customizer</p>
+                </div>
+                <div class="rounded-2xl bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-emerald-200">
+                  15+ anos experiência
+                </div>
+              </div>
+              <blockquote class="text-lg text-zinc-200">
+                “Acreditamos que cada carro merece contar a história do seu condutor. 
+                Combinamos engenharia, estética e proteção para atingir um resultado totalmente único.”
+              </blockquote>
+              <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-zinc-300">
+                <div class="flex items-center gap-3">
+                  <span class="gradient-clip text-xl font-semibold">AS+</span>
+                  <div>
+                    <p class="font-semibold text-white">showroom leiria</p>
+                    <p class="text-xs uppercase tracking-[0.35em] text-emerald-300">
+                      Estrada Nacional 1, Fração E, N°113, Calvaria de Cima
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-4">
+                  Atendimento por marcação para uma experiência privada e consultoria personalizada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden px-6 py-24">
+        <div class="absolute inset-0 -z-10 rotate-12 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-transparent blur-3xl"></div>
+        <div class="mx-auto max-w-6xl">
+          <div class="glass rounded-[36px] border border-white/10 p-8 sm:p-12">
+            <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+              <div class="flex-1">
+                <span class="text-xs uppercase tracking-[0.35em] text-emerald-300"
+                  >Chrome Delete & Detalhes</span
+                >
+                <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">
+                  Minimalismo agressivo. Elimine cromados, destaque o carácter.
+                </h2>
+                <p class="mt-4 text-base text-zinc-300">
+                  Revestimos frisos, molduras, grelhas e consoles interiores para alinhar cada linha do veículo ao conceito desejado, criando uma assinatura visual coerente e sofisticada.
+                </p>
+              </div>
+              <div class="flex flex-1 flex-col gap-4 text-sm text-zinc-200">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-xs uppercase tracking-[0.3em] text-emerald-300">Custom Interior</p>
+                  <p class="mt-2">
+                    Aplicação de vinil técnico em consola central, painel de comandos e painéis de porta com textura carbono, escovado ou soft-touch.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-xs uppercase tracking-[0.3em] text-emerald-300">Exterior Signature</p>
+                  <p class="mt-2">
+                    Delete de frisos cromados, logótipos, entradas de ar e barras de tejadilho com acabamento satinado stealth, black piano ou tonalidade personalizada.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-xs uppercase tracking-[0.3em] text-emerald-300">Detalhes Pintados</p>
+                  <p class="mt-2">
+                    Revestimentos combinados com pintura localizada para efeitos two-tone e ombre com verniz de proteção adicional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+          <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+            >Feedback Real</span
+          >
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">
+            Clientes que conduzem com orgulho.
+          </h2>
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <div class="glass flex flex-col gap-4 rounded-[28px] border border-white/10 p-6">
+              <p class="text-sm text-zinc-300">
+                “Nunca imaginei que um wrap pudesse parecer melhor que pintura original. 
+                Detalhes impecáveis e proteção a toda prova.”
+              </p>
+              <div class="flex items-center justify-between text-xs text-zinc-400">
+                <span>Diogo Ferreira • Porsche 911</span>
+                <span class="text-emerald-300">★★★★★</span>
+              </div>
+            </div>
+            <div class="glass flex flex-col gap-4 rounded-[28px] border border-white/10 p-6">
+              <p class="text-sm text-zinc-300">
+                “Vidros com privacidade total e zero interferências em sensores. Serviço rápido e extremamente profissional.”
+              </p>
+              <div class="flex items-center justify-between text-xs text-zinc-400">
+                <span>Helena Ramos • Tesla Model Y</span>
+                <span class="text-emerald-300">★★★★★</span>
+              </div>
+            </div>
+            <div class="glass flex flex-col gap-4 rounded-[28px] border border-white/10 p-6">
+              <p class="text-sm text-zinc-300">
+                “Aplicaram PPF em todo o frontal do meu Range Rover e eliminaram os cromados – ficou simplesmente brutal.”
+              </p>
+              <div class="flex items-center justify-between text-xs text-zinc-400">
+                <span>Ricardo Dias • Range Rover Vogue</span>
+                <span class="text-emerald-300">★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contacto"
+        class="relative overflow-hidden px-6 py-24"
+      >
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.35),_transparent_60%)]"></div>
+        <div class="mx-auto max-w-6xl">
+          <div class="glass rounded-[36px] border border-white/10 p-8 sm:p-12">
+            <div class="grid gap-12 lg:grid-cols-[1fr,0.9fr]">
+              <div>
+                <span class="text-xs uppercase tracking-[0.3em] text-emerald-300"
+                  >Contacto Directo</span
+                >
+                <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">
+                  Agende o seu slot exclusivo no nosso estúdio em Leiria.
+                </h2>
+                <p class="mt-4 text-base text-zinc-300">
+                  Atendimento personalizado, com roadmap detalhado, simulação de acabamentos e 
+                  consultoria sobre manutenção de longo prazo.
+                </p>
+                <div class="mt-8 flex flex-col gap-4 text-sm text-zinc-200">
+                  <div class="flex items-center gap-3">
+                    <span class="text-emerald-300">📍</span>
+                    <p>
+                      Estrada Nacional 1, Fração E, N°113, Calvaria de Cima, 2480-049 — Leiria, Portugal
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-emerald-300">📞</span>
+                    <p>+351 915 555 321</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-emerald-300">✉️</span>
+                    <p>atelier@aspluscustoms.pt</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-emerald-300">🕒</span>
+                    <p>Segunda a Sábado — 09:00 às 19:00 (por marcação)</p>
+                  </div>
+                </div>
+              </div>
+              <form class="flex flex-col gap-5">
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="flex flex-col gap-2 text-sm font-medium text-zinc-200">
+                    Nome
+                    <input
+                      type="text"
+                      placeholder="O seu nome"
+                      class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/40"
+                    />
+                  </label>
+                  <label class="flex flex-col gap-2 text-sm font-medium text-zinc-200">
+                    Email
+                    <input
+                      type="email"
+                      placeholder="nome@email.com"
+                      class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/40"
+                    />
+                  </label>
+                  <label class="flex flex-col gap-2 text-sm font-medium text-zinc-200">
+                    Telefone
+                    <input
+                      type="tel"
+                      placeholder="+351 ..."
+                      class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/40"
+                    />
+                  </label>
+                  <label class="flex flex-col gap-2 text-sm font-medium text-zinc-200">
+                    Serviço
+                    <select
+                      class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/40"
+                    >
+                      <option class="bg-[#060608]">Escurecimento de Vidros</option>
+                      <option class="bg-[#060608]">Car Wrapping</option>
+                      <option class="bg-[#060608]">PPF - Paint Protection Film</option>
+                      <option class="bg-[#060608]">Chrome Delete & Detalhes</option>
+                      <option class="bg-[#060608]">Consultoria Personalizada</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="flex flex-col gap-2 text-sm font-medium text-zinc-200">
+                  Mensagem
+                  <textarea
+                    rows="4"
+                    placeholder="Partilhe objetivos, modelo do veículo e data ideal."
+                    class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/40"
+                  ></textarea>
+                </label>
+                <button
+                  type="submit"
+                  class="border-animated rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black transition hover:bg-emerald-300"
+                >
+                  Solicitar Proposta
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 px-6 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex flex-col gap-1 text-sm text-zinc-400">
+          <span class="text-white font-semibold">AS+ Customs</span>
+          <span>Personalização Automóvel de Elite • Leiria, Portugal</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-zinc-400">
+          <a href="#servicos" class="transition hover:text-emerald-300">Serviços</a>
+          <a href="#portfolio" class="transition hover:text-emerald-300">Portfolio</a>
+          <a href="#processo" class="transition hover:text-emerald-300">Processo</a>
+          <a href="#contacto" class="transition hover:text-emerald-300">Contacto</a>
+        </div>
+        <p class="text-xs text-zinc-500">
+          © <span class="text-emerald-300">AS+ Customs</span> — Driven by design.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
